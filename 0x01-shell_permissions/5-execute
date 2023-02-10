@@ -1,2 +1,2 @@
 #!/bin/bash
-chmoi 744 Hello
+chmod 744 Hello
