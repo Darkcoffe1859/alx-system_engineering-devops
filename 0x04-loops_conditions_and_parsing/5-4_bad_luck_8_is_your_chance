@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
-#script that displays badluck at 4th, good luck at 8th and Best school for other iterations
-
-iteration=1
-while[$iteration -le 10
+# This script loops from 1 to 10:
+# displays bad luck for the 4th loop iteration
+# displays good luck for the 8th loop iteration
+# displays Holberton School for the other iterations
+i="0"
+while [ $i -lt 10 ]
 do
-if[$iteration -eq 4]
-
-then
-echo "bad luck"
-
-if [$iteration -eq 8]
-then
-echo "good luck"
-else
-echo "Best School"
-fi
-iteration = $((iteration + 1))
+	if [ $i -eq 3 ];
+	then
+		    echo "bad luck"
+	    elif [ $i -eq 7 ];
+	    then
+		        echo "good luck"
+		else
+			    echo "Best School"
+	fi
+	i=$((i+1))
 done
