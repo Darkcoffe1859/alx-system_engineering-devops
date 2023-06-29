@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#A program that displays "best school 10timws using while loop
+
+while [ $count -lt 10 ]
+do
+ echo "Best School"
+ (( count++ ))
+done
