@@ -1,0 +1,24 @@
+#!/usr/bin/env/bash
+# Script that displays 1 to 20
+# Displays 4 and then bad luck from China
+# Displays 9 and then bad luck from Japan
+# Displays 17 and then bad luck from Italy
+
+iteration=1
+while [$iteration -le 20]
+do
+	case $iteration in
+	4)
+		echo "4" and then "bad luck from China"
+	;;
+	9)
+		echo "9" and then "bad luck from Japan"
+	;;
+	17)
+		echo "17" and then "bad luck from Italy"
+	;;
+	*)
+	echo $iteration
+	;;
+	iteration =$((iteration + 1))
+done
