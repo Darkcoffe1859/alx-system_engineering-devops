@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Script that display content of current directory
+
+echo "Conent of current directory (after first dash):"
+for file in *; do
+    if [ -f "$file" ] && [[ "$file" != .* ]] && [[ "$file" == -* ]]; then
+        name=${file#*-}
+	echo "-${name}"
+    fi
+done
