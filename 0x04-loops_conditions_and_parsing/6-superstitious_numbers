@@ -4,21 +4,21 @@
 # Displays 9 and then bad luck from Japan
 # Displays 17 and then bad luck from Italy
 
-iteration=1
-while [$iteration -le 20]
+iteration="1"
+while [ $iteration -le 20 ]
 do
-	case $iteration in
-	4)
-		echo "4" and then "bad luck from China"
+case $iteration in
+	4)	echo $iteration
+		echo "bad luck from China"
 	;;
-	9)
-		echo "9" and then "bad luck from Japan"
+	9)	echo $iteration
+		echo "bad luck from Japan"
 	;;
-	17)
-		echo "17" and then "bad luck from Italy"
+	17)	echo $iteration
+		echo "bad luck from Italy"
 	;;
 	*)
-	echo $iteration
-	;;
-	iteration =$((iteration + 1))
+		echo $iteration
+esac
+iteration =$((iteration + 1))
 done
