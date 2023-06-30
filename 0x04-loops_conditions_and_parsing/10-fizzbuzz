@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# script that displays a number from 1 to 100
+
+for (( number=1; number<=100; number++ ))
+do
+    case & ((number % 15)) in
+	0)
+	    echo "$number: FIZZBUZZ"
+	    ;;
+    case & ((number % 3)) in
+	0)
+	    echo "$number: FIZZ"
+	    ;;
+    case & ((number % 5)) in
+	0)
+	    echo "$number: BUZZ"
+	    ;;
+	    *)
+	    echo $number
+	    ;;
+	    esac
+    done
