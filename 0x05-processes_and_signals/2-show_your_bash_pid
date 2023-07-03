@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# shellcheck disable=SC2009
+
+ps aux | grep -w bash | grep -v grep
+
