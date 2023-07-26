@@ -1,9 +1,21 @@
-#!/usr/bin/env bash
-# Configures an Ubuntu server as follows:
-#   - localhost resolves to 127.0.0.2
-#   - facebook.com resolves to 8.8.8.8
+#!/bin/bash
 
-cp /etc/hosts new_hosts
-sed -i s/^127.*/"127.0.0.2 localhost"/ new_hosts
-echo "8.8.8.8 facebook.com" >> new_hosts
-cp new_hosts /etc/hosts
+# Check if the script is being run with sudo privileges
+if [ "$(id -u)" -ne 0 ]; then
+	    echo "Please run this script with sudo or as root."
+	        exit 1
+fi
+
+# Backup the current /etc/hosts file
+cp /etc/hosts /etc/hosts.backup
+
+# Replace the entries for localhost and facebook.com in the hosts file
+sed -i 's/^127.0.0.1[[:space:]]localhost/127.0.0.2\tlocalhost/g' /etc/hosts
+sed -i 's/^157.240.11.35[[:space:]]facebook.com/8.8.8.8\tfacebook.com/g' /etc/hosts
+
+# Print success message
+echo "Hosts file updated successfully. localhost now resolves to 127.0.0.2 and facebook.com resolves to 8.8.8.8."
+
+# Clear the DNS cache
+systemctl restart systemd-resolved
+
