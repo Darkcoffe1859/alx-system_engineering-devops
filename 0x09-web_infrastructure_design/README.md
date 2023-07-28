@@ -1,6 +1,7 @@
 *WEB INFRASTRUCTURE DESIGN*.
 
-This is the underlying technology and architecture that supports the functioning of a website. it includes the hardware, software, network and server components that work togetherto deliver the websites content and provides a smooth user experience
+This is the underlying technology and architecture that supports the functioning of a website. it includes the hardware, software, network and server components that work togetherto deliver the websites content and provides a smooth user experience.
+
 *This project covers the following*.
 
 - The server is the physical or virtual machine that hosts the entire web infrastructure.
