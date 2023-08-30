@@ -1,16 +1,8 @@
 #!/usr/bin/env bash
+# nginx web server listening on port 80
+# returns a page that contains the string "Hello World!"
 
-# Update package list and install nginx
-sudo apt-get update
-sudo apt-get install -y nginx
-
-# Configure Nginx to listen on port 80
-# You might need to modify Nginx's default configuration files
-echo "Hello World!" | sudo tee /var/www/school/index.html
-
-# Restart Nginx using a different method (not systemctl)
-sudo service nginx restart
-
-# Print a success message
-echo "Nginx installation and configuration completed!"
-
+sudo apt update -y
+sudo apt install -y nginx
+echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+sudo service nginx start
