@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Start Docker container and map ports
+docker run -p 8080:80 -d -it holbertonschool/265-0
+
+# Access the container
+docker exec -ti 7bf261d21155 /bin/bash
+
+# Start Apache service
+service apache2 start
+
